@@ -1,0 +1,24 @@
+.task-form{
+display: flex;
+gap:1rem;
+margin-bottom: 1.5rem;
+}
+
+.task-input{
+flex: 1;
+padding: 0.5rem;
+font-size: 1rem;
+border: 2px solid #ddd;
+border-radius: 8px;
+}
+
+.add-task-btn{
+padding: 0.5 rem 1rem;
+font-size: 1rem;
+color:white;
+background-color:#007bff ;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}

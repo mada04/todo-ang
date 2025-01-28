@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()" class="task-form">
+    <div>
+        <input type="text"
+        placeholder="Nume sarcina"
+        [(ngModel)]="title"
+        name="title"
+        class="task-input"
+        required
+        />
+    </div>
+    <div>
+        <input type="text"
+        placeholder="Categorie"
+        [(ngModel)]="category"
+        name="category"
+        class="task-input"
+        />
+    </div>
+
+    <button type="submit" class="add-task-btn">Adauga</button>
+</form>
