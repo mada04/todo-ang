@@ -77,20 +77,20 @@
 .filter-btn{
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    border: 2px solid #007bff;
+    border: 2px solid #d85971;
     border-radius: 8px;
     background-color: white;
-    color: #007bff;
+    color: #d85971;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .filter-btn:hover{
-    background-color: #007bff;
+    background-color: #d85971;
     color:white
 }
 .filter-btn.active{
-    background-color: #007bff;
+    background-color: #d85971;
     color: white;
     font-weight: bold;
 }

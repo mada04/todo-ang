@@ -46,14 +46,10 @@ toggleTaskCompletion(task:Task):void{
 deleteTask(taskId:number):void{
  this.todoService.deleteTask(taskId);
  this.tasks=this.todoService.getTasks();
-  // this.todoService.saveTasks(this.tasks);
+
+  console.log("sterge")
 }
 
-// get filteredTasks():Task[]{
-//   if(this.filters==='Toate') return this.tasks;
-//   if(this.filters==='completed') return this.tasks.filter((t)=>t.completed)
-//   return this.tasks.filter((t)=>!t.completed)
-// }
 
 setFilter(filter:string){
   this.currentFilter = filter;

@@ -4,3 +4,10 @@ export interface Task {
     completed:boolean;
     category:string;
 }
+export interface Note{
+    id:number;
+    title:string;
+    content:string;
+    date:string;
+}
+
