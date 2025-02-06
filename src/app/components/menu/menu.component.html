@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <button mat-button [matMenuTriggerFor]="menu">Meniu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/">Sarcini</button>
+      <button mat-menu-item routerLink="/notite">Notite</button>
+      <button mat-menu-item routerLink="/produse">Produse</button>
+      <button mat-menu-item routerLink="/cheltuieli">Cheltuieli</button>
+      <button mat-menu-item routerLink="/grafic">Grafic</button>
+    </mat-menu>
+  </mat-toolbar>
+  

@@ -1,0 +1,9 @@
+<app-expense></app-expense>
+<ul>
+    <li *ngFor="let expense of expenses$ | async">
+      <span>{{ expense.title }} - {{ expense.amount }} RON ({{ expense.category }})</span>
+      <button mat-icon-button color="warn" (click)="deleteExpense(expense.id)">
+        🗑️
+      </button>
+    </li>
+  </ul>

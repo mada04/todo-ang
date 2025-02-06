@@ -1,0 +1,43 @@
+
+<div class="container">
+    <h2>Gestionare Produse</h2>
+  
+    <div class="form">
+      <input [(ngModel)]="newProduct.name" placeholder="Nume Produs" />
+      <input [(ngModel)]="newProduct.price" type="number" placeholder="Preț" />
+      <input [(ngModel)]="newProduct.category" placeholder="Categorie" />
+      <input [(ngModel)]="newProduct.stock" type="number" placeholder="Stoc" />
+      <button (click)="addProduct()">Adaugă Produs</button>
+    </div> 
+    <button mat-button (click)="openDialog()">Deschide </button>
+
+    <input [(ngModel)]="searchQuery" placeholder="Caută produs..." /> 
+  
+   <table *ngIf="products.length > 0">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nume</th>
+          <th>Preț</th>
+          <th>Categorie</th>
+          <th>Stoc</th>
+          <th>Acțiuni</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of filterProducts(); let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }} RON</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.stock }}</td>
+          <td>
+            <button (click)="deleteProduct(product.id)">Șterge</button>
+          </td>
+        </tr>
+      </tbody>
+    </table> 
+  
+    <p *ngIf="products.length === 0">Nu există produse disponibile.</p>
+  </div>
+  

@@ -11,3 +11,18 @@ export interface Note{
     date:string;
 }
 
+
+export interface Product {
+    id:number;
+    name:string;
+    price:number;
+    category:string;
+    stock:number;
+}
+export interface Expense{
+    id:number;
+    title:string;
+    amount:number;
+    category:string;
+    date:string;
+}
