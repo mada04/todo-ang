@@ -24,7 +24,7 @@ ngAfterViewInit(): void {
       type: 'doughnut',
       data: {
         labels: Object.keys(categories),
-        datasets: [{ data: Object.values(categories), backgroundColor: ['red', 'blue', 'green'] }],
+        datasets: [{ data: Object.values(categories), backgroundColor: ['#c2cf7a', '#36f4e2', '#ff4081'] }],
       },})})
 }
 }

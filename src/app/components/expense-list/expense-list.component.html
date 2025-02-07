@@ -1,9 +1,34 @@
 <app-expense></app-expense>
-<ul>
-    <li *ngFor="let expense of expenses$ | async">
-      <span>{{ expense.title }} - {{ expense.amount }} RON ({{ expense.category }})</span>
-      <button mat-icon-button color="warn" (click)="deleteExpense(expense.id)">
-        🗑️
-      </button>
-    </li>
-  </ul>
+<div class="container">
+
+  <table mat-table [dataSource]="expenses$" class="mat-elevation-z8" *ngIf="(expenses$ | async)?.length ??0">
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Id</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+    <!-- Coloană Nume -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef >Title</th>
+      <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+    </ng-container>
+
+    <!-- Coloană Vârstă -->
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef>Suma</th>
+      <td mat-cell *matCellDef="let element">{{ element.amount }}</td>
+    </ng-container>
+    <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef>Categorie</th>
+        <td mat-cell *matCellDef="let element">{{ element.category }}</td>
+      </ng-container>
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Data</th>
+        <td mat-cell *matCellDef="let element">{{ element.date | date:'dd/MM/yyyy' }}</td>
+      </ng-container>
+    <!-- Coloană Acțiuni -->
+ 
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

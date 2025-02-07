@@ -7,11 +7,12 @@ import { MatFormField} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-expense',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,MatFormField,MatInputModule,MatSelectModule,MatButtonModule],
+  imports: [CommonModule,ReactiveFormsModule,MatFormField,MatInputModule,MatSelectModule,MatButtonModule,MatDatepickerModule],
   templateUrl:'./expense.component.html',
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
   styleUrl: './expense.component.css'
