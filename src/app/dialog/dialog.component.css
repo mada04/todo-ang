@@ -1,0 +1,33 @@
+.mat-dialog-container {
+    background: #fff; /* Fundal alb */
+    border-radius: 12px; /* Colțuri rotunjite */
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Stilizare input field */
+  mat-form-field {
+    margin-bottom: 16px;
+    width: 100%;
+  }
+  
+  mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    gap: 10px; /* Adaugă spațiu între butoane */
+  }
+  
+  button {
+    min-width: 100px;
+  }
+  
+  /* Schimbă culoarea când butonul este activ */
+  button[color="primary"]:not(:disabled) {
+    background: #6200ea;
+    color: white;
+  }
+  
+  button[color="primary"]:not(:disabled):hover {
+    background: #3700b3;
+  }

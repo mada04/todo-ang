@@ -2,13 +2,7 @@
 <div class="container">
     <h2>Gestionare Produse</h2>
   
-    <div class="form">
-      <input [(ngModel)]="newProduct.name" placeholder="Nume Produs" />
-      <input [(ngModel)]="newProduct.price" type="number" placeholder="Preț" />
-      <input [(ngModel)]="newProduct.category" placeholder="Categorie" />
-      <input [(ngModel)]="newProduct.stock" type="number" placeholder="Stoc" />
-      <button (click)="addProduct()">Adaugă Produs</button>
-    </div> 
+    
     <button mat-button (click)="openDialog()">Deschide </button>
 
     <input [(ngModel)]="searchQuery" placeholder="Caută produs..." /> 
@@ -31,9 +25,7 @@
           <td>{{ product.price }} RON</td>
           <td>{{ product.category }}</td>
           <td>{{ product.stock }}</td>
-          <td>
-            <button (click)="deleteProduct(product.id)">Șterge</button>
-          </td>
+        
         </tr>
       </tbody>
     </table> 
