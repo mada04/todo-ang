@@ -8,11 +8,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-expense',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,MatFormField,MatInputModule,MatSelectModule,MatButtonModule,MatDatepickerModule],
+  imports: [CommonModule,ReactiveFormsModule,MatFormField,MatInputModule,MatSelectModule,MatButtonModule,MatDatepickerModule, MatCardModule],
   templateUrl:'./expense.component.html',
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
   styleUrl: './expense.component.css'
