@@ -1,8 +1,8 @@
 <div [@dialogAnimation]>
-<h2 mat-dialog-title>Adaugare Utilizator</h2>
-<mat-dialog-content>
-    <form [formGroup]="form">
-        <mat-form-field appearance="outline" class="full-width">
+    <h2 mat-dialog-title>{{data.title}}</h2>
+    <mat-dialog-content>
+        <form [formGroup]="form">
+            <!-- <mat-form-field appearance="outline" class="full-width">
             <mat-label>Nume</mat-label>
             <input matInput formControlName="name">
         </mat-form-field>
@@ -20,13 +20,19 @@
         <mat-form-field appearance="outline">
         <mat-label>Stock</mat-label>
         <input matInput formControlName="stock" type="number">
-        </mat-form-field>
+        </mat-form-field> -->
+            @for(value of data.formValues; track value.name){
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{value.label}}</mat-label>
+                <input matInput [formControlName]="value.name" type="text">
+            </mat-form-field>
+            }
 
-    </form>
-</mat-dialog-content>
-<mat-dialog-actions >
-<button mat-button (click)="dialogRef.close()">Anuleaza</button>
-<button mat-button color="primary" (click)="closeDialog()" [disabled]="form.invalid">Salveaza</button>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button (click)="dialogRef.close()">Anuleaza</button>
+        <button mat-button color="primary" (click)="closeDialog()" [disabled]="form.invalid">Salveaza</button>
 
-</mat-dialog-actions>
+    </mat-dialog-actions>
 </div>

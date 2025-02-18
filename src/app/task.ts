@@ -26,3 +26,14 @@ export interface Expense{
     category:string;
     date:string;
 }
+
+export interface DialogFormValue {
+    label: string,
+    name: string,
+    type: string
+}
+
+export interface DialogData {
+    title: string,
+    formValues: DialogFormValue[]
+}
